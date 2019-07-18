@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FlowerShop</title>
+</head>
+<body>
+<h2>Регистрация</h2>
+<br>
+{{#message}}
+    {{message}}
+    {{/message}}
+<br>
+<form action="/registration" method="post">
+    <div><label> Логин :<input type="text" name="username"/> </label></div>
+    <div><label> Пароль:  <input type="password" name="password"/> </label></div>
+    <div><label> ФИО :     <input type="text" name="fio"/> </label></div>
+    <div><label> Адрес :   <input type="text" name="address"/> </label></div>
+    <div><label> Телефон : <input type="text" name="tel"/> </label></div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+    <br>
+    <div><input type="submit" value="Зарегистрироваться"/></div>
+</form>
+</body>
+</html>
